@@ -24,7 +24,7 @@ namespace DIO_ModuloAPI.Controllers
         {
             _context.Add(contato);
             _context.SaveChanges();
-            return CreatedAtAction(nameof(ObterPorId), new Object{ id = contato.Id }, contato);
+            return CreatedAtAction(nameof(ObterPorId), new { id = contato.Id }, contato);
         }
 
         [HttpGet("{id}")]
